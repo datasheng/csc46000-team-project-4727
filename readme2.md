@@ -1,3 +1,4 @@
+# Link To the StreamLit https://csc46000-team-project-4727-rent-vs-buying-comp.streamlit.app/
 # Buy vs Rent Financial Analysis: Complete Technical Documentation
 
 ## Table of Contents
@@ -609,5 +610,6 @@ All visualizations are saved as PNG files in the `data/` directory:
 
 *Document generated for presentation purposes*
 *Last updated: 2025*
+
 
 
