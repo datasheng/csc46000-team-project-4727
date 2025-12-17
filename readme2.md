@@ -1,3 +1,61 @@
+# Buy vs Rent Financial Analysis: Complete Technical Documentation
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [What the Code Does (Step-by-Step)](#what-the-code-does-step-by-step)
+3. [Data Collection & Storage](#data-collection--storage)
+4. [Forecasting Model Mechanics](#forecasting-model-mechanics)
+5. [Key Findings](#key-findings)
+6. [Technical Details](#technical-details)
+7. [Data Flow Diagram](#data-flow-diagram)
+
+---
+
+## Project Overview
+
+This is a **comprehensive financial analysis** comparing buying vs renting a home in New York City over 10 and 30-year time horizons. The project uses **time series forecasting** and **financial modeling** to determine which option is more financially advantageous.
+
+### Core Question
+**"Should I buy or rent a home in NYC?"**
+
+The analysis answers this by:
+- Forecasting future house prices, rental prices, and mortgage rates
+- Calculating all costs and benefits for both scenarios
+- Finding the break-even point where buying becomes cheaper
+- Comparing net wealth accumulation over time
+
+---
+
+## What the Code Does (Step-by-Step)
+
+### Phase 1: Data Collection and Preprocessing
+
+#### 1. House Prices
+- **Source**: NYC median home values (2015-2025)
+- **Data**: Historical price trends from Zillow
+- **Processing**: Clean, format, and prepare for analysis
+
+#### 2. Rental Prices
+- **Source**: NYC median rental prices (2015-2025)
+- **Data**: Historical rental trends
+- **Processing**: Handle missing values (COVID gap), interpolate
+
+#### 3. Mortgage Rates
+- **Source**: 30-year fixed mortgage rates from FRED (Federal Reserve)
+- **Data**: Historical interest rate data
+- **Processing**: Convert weekly to monthly averages
+
+### Phase 2: Time Series Forecasting
+
+The code uses **ARIMA/SARIMA models** to forecast 10 and 30 years into the future:
+- **House prices**: Forecasted appreciation
+- **Rental prices**: Forecasted rent increases
+- **Mortgage rates**: Forecasted interest rates
+
+**Why ARIMA?**
+- More conservative and realistic than Prophet
+- Better handles mortgage rate volatility
+- Prophet predicted unrealistic 14.61% rates vs ARIMA's 6.13%
 
 ### Phase 3: Financial Modeling
 
